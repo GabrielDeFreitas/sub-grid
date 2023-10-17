@@ -7,5 +7,140 @@
 </head>
 <body>
     <h1>sub-grid</h1>
+    <div>
+      <ul class="tiles">
+        <li class="tile">
+          <a href="">
+            <h2 class="tile-name">
+              <img src="https://www.w3.org/WAI/content-images/wai-aria-practices/img/accordion.svg" alt="">
+              <span>Lorem impson accordion section</span>
+            </h2>
+          </a>
+          <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          </div>
+        </li>
+        <li class="tile">
+          <a href="">
+            <h2 class="tile-name">
+              <img src="https://www.w3.org/WAI/content-images/wai-aria-practices/img/accordion.svg" alt="">
+              <span>Lorem impson accordion section</span>
+            </h2>
+          </a>
+          <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          </div>
+        </li>
+        <li class="tile">
+          <a href="">
+            <h2 class="tile-name">
+              <img src="https://www.w3.org/WAI/content-images/wai-aria-practices/img/accordion.svg" alt="">
+              <span>Lorem impson accordion section</span>
+            </h2>
+          </a>
+          <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          </div>
+        </li>
+        <li class="tile">
+          <a href="">
+            <h2 class="tile-name">
+              <img src="https://www.w3.org/WAI/content-images/wai-aria-practices/img/accordion.svg" alt="">
+              <span>Lorem impson accordion section</span>
+            </h2>
+          </a>
+          <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          </div>
+        </li>
+        <li class="tile">
+          <a href="">
+            <h2 class="tile-name">
+              <img src="https://www.w3.org/WAI/content-images/wai-aria-practices/img/accordion.svg" alt="">
+              <span>Lorem impson accordion section</span>
+            </h2>
+          </a>
+          <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          </div>
+        </li>
+      </ul>
+    </div>
 </body>
 </html>
+
+
+<style>
+
+ul.tiles {
+  display: grid;
+  row-gap: 50px;
+  padding: 0;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 2em 2em 0;
+    background: #ffffff;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  gap: 16px;
+}
+
+li.tile a {
+  display: block;
+  text-decoration: none;
+  color: green;
+}
+
+li.tile a:hover {
+  text-decoration: underline;
+}
+
+li.tile a:focus {
+  outline-offset: 8px;
+  outline-color: #113362;
+}
+
+li.tile a:visited {
+  color: green;
+}
+
+li.tile h2.tile-name {
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+li.tile img {
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 23em) {
+  li.tile h2.tile-name {
+    flex-direction: column;
+  }
+  li.tile h2.tile-name span {
+    margin-top: 0.5em;
+  }
+}
+
+hr {
+  margin-top: 1rem
+}
+
+/*.tile :is(a, p) {
+  padding-inline: 8px;
+}*/
+
+</style>
